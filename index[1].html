@@ -1,0 +1,86 @@
+oman-gov-site/
+  index.html
+  netlify.toml
+  _headers
+  robots.txt
+  sitemap.xml
+  css/
+    styles.css
+  js/
+    main.js
+  en/
+    index.html
+    attractions.html
+    food.html
+    history.html
+    rules.html
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oman Visitor Information Portal</title>
+  <meta name="description" content="Official-style visitor information portal for the Sultanate of Oman: attractions, food, history, travel rules, safety, accessibility and contact." />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body class="page page-landing">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Oman Visitor Information Portal">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Oman Visitor Information Portal</span>
+          <span class="brand-subtitle">Official-style guidance for tourists</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="./en/">English</a>
+        <a class="nav-link" href="./ar/">العربية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="glass panel">
+        <h1>Choose your language</h1>
+        <p class="muted">
+          This portal provides curated attractions, culture & history, food, travel rules, safety guidance, accessibility information,
+          and contact/feedback. It is designed for performance, security posture, and accessibility readiness.
+        </p>
+
+        <div class="grid grid-3" style="margin-top:14px;">
+          <a class="card glass btn-like" href="./en/"><h2 class="h4">English</h2><p class="muted">Full site</p></a>
+          <a class="card glass btn-like" href="./ar/"><h2 class="h4">العربية</h2><p class="muted">الصفحات الأساسية</p></a>
+          <a class="card glass btn-like" href="./hi/"><h2 class="h4">हिन्दी</h2><p class="muted">Core pages</p></a>
+          <a class="card glass btn-like" href="./ur/"><h2 class="h4">اردو</h2><p class="muted">Core pages</p></a>
+          <a class="card glass btn-like" href="./fr/"><h2 class="h4">Français</h2><p class="muted">Core pages</p></a>
+          <a class="card glass btn-like" href="./de/"><h2 class="h4">Deutsch</h2><p class="muted">Core pages</p></a>
+          <a class="card glass btn-like" href="./ru/"><h2 class="h4">Русский</h2><p class="muted">Core pages</p></a>
+          <a class="card glass btn-like" href="./zh/"><h2 class="h4">中文</h2><p class="muted">核心页面</p></a>
+          <a class="card glass btn-like" href="./it/"><h2 class="h4">Italiano</h2><p class="muted">Pagine base</p></a>
+          <a class="card glass btn-like" href="./es/"><h2 class="h4">Español</h2><p class="muted">Páginas base</p></a>
+        </div>
+
+        <div class="note glass" style="margin-top:16px;">
+          <h2 class="h4">Search visibility</h2>
+          <p class="muted">
+            After deployment, update <code>sitemap.xml</code> and <code>robots.txt</code> with your final Netlify URL or domain, then submit the sitemap in Google Search Console.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Oman Visitor Information Portal.</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
+
