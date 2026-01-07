@@ -1,82 +1,127 @@
-oman-gov-site/
-  index.html
-  netlify.toml
-  _headers
-  robots.txt
-  sitemap.xml
-  css/
-    styles.css
-  js/
-    main.js
-  en/
-    index.html
-    attractions.html
-    food.html
-    history.html
-    rules.html
- <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oman Visitor Information Portal</title>
-  <meta name="description" content="Official-style visitor information portal for the Sultanate of Oman: attractions, food, history, travel rules, safety, accessibility and contact." />
-  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Discover Oman | Official-Style Visitor Portal</title>
+  <meta name="description" content="Discover Oman: attractions, food, history, travel rules, safety guidance, accessibility and official links." />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body class="page page-landing">
+<body class="page page-en-home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html" aria-label="Oman Visitor Information Portal">
+      <a class="brand" href="./" aria-label="Discover Oman home">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
-          <span class="brand-title">Oman Visitor Information Portal</span>
-          <span class="brand-subtitle">Official-style guidance for tourists</span>
+          <span class="brand-title">Discover Oman</span>
+          <span class="brand-subtitle">Official-style visitor information</span>
         </span>
       </a>
+
       <nav class="nav" aria-label="Primary">
-        <a class="nav-link" href="./en/">English</a>
-        <a class="nav-link" href="./ar/">العربية</a>
+        <div class="nav-menu">
+          <a class="nav-link is-active" href="./">Home</a>
+          <a class="nav-link" href="./attractions.html">Attractions</a>
+          <a class="nav-link" href="./food.html">Food</a>
+          <a class="nav-link" href="./history.html">History & Culture</a>
+          <a class="nav-link" href="./rules.html">Travel Rules</a>
+          <a class="nav-link" href="./safety.html">Safety</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </div>
+
+        <select class="lang-select" aria-label="Language selector"
+          onchange="if(this.value) window.location.href=this.value">
+          <option value="/en/" selected>English</option>
+          <option value="/ar/">العربية</option>
+          <option value="/hi/">हिन्दी</option>
+          <option value="/ur/">اردو</option>
+          <option value="/fr/">Français</option>
+          <option value="/de/">Deutsch</option>
+          <option value="/ru/">Русский</option>
+          <option value="/zh/">中文</option>
+          <option value="/it/">Italiano</option>
+          <option value="/es/">Español</option>
+        </select>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="section">
-    <div class="container">
-      <div class="glass panel">
-        <h1>Choose your language</h1>
-        <p class="muted">
-          This portal provides curated attractions, culture & history, food, travel rules, safety guidance, accessibility information,
-          and contact/feedback. It is designed for performance, security posture, and accessibility readiness.
+  <main id="main">
+    <section class="page-hero">
+      <div class="container glass page-hero-inner">
+        <h1>Oman: mountains, desert, sea, and heritage</h1>
+        <p class="lead">
+          A secure, accessible visitor portal with curated recommendations and official links for verification.
         </p>
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="./attractions.html">Explore attractions</a>
+          <a class="btn" href="./rules.html">Travel rules</a>
+          <a class="btn" href="./safety.html">Safety & emergency</a>
+        </div>
+      </div>
+    </section>
 
-        <div class="grid grid-3" style="margin-top:14px;">
-          <a class="card glass btn-like" href="./en/"><h2 class="h4">English</h2><p class="muted">Full site</p></a>
-          <a class="card glass btn-like" href="./ar/"><h2 class="h4">العربية</h2><p class="muted">الصفحات الأساسية</p></a>
-          <a class="card glass btn-like" href="./hi/"><h2 class="h4">हिन्दी</h2><p class="muted">Core pages</p></a>
-          <a class="card glass btn-like" href="./ur/"><h2 class="h4">اردو</h2><p class="muted">Core pages</p></a>
-          <a class="card glass btn-like" href="./fr/"><h2 class="h4">Français</h2><p class="muted">Core pages</p></a>
-          <a class="card glass btn-like" href="./de/"><h2 class="h4">Deutsch</h2><p class="muted">Core pages</p></a>
-          <a class="card glass btn-like" href="./ru/"><h2 class="h4">Русский</h2><p class="muted">Core pages</p></a>
-          <a class="card glass btn-like" href="./zh/"><h2 class="h4">中文</h2><p class="muted">核心页面</p></a>
-          <a class="card glass btn-like" href="./it/"><h2 class="h4">Italiano</h2><p class="muted">Pagine base</p></a>
-          <a class="card glass btn-like" href="./es/"><h2 class="h4">Español</h2><p class="muted">Páginas base</p></a>
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="card glass">
+            <h2 class="h4">Government-grade signals</h2>
+            <ul class="bullets">
+              <li>Security headers + CSP</li>
+              <li>Privacy & accessibility statements</li>
+              <li>Official links for policy verification</li>
+            </ul>
+            <a class="btn" href="./privacy.html">Privacy</a>
+          </div>
+
+          <div class="card glass">
+            <h2 class="h4">Fast, mobile-first</h2>
+            <ul class="bullets">
+              <li>Static hosting performance</li>
+              <li>Low bandwidth friendly</li>
+              <li>Real photos with licensing</li>
+            </ul>
+            <a class="btn" href="./credits.html">Image credits</a>
+          </div>
+
+          <div class="card glass">
+            <h2 class="h4">Visitor essentials</h2>
+            <ul class="bullets">
+              <li>Dress and etiquette guidance</li>
+              <li>Driving and wadi safety</li>
+              <li>Emergency references</li>
+            </ul>
+            <a class="btn" href="./safety.html">Open safety</a>
+          </div>
         </div>
 
-        
+        <div class="note glass">
+          <h2 class="h4">Official references (verify before travel)</h2>
+          <ul class="bullets">
+            <li>Royal Oman Police (ROP) eVisa portal: <a href="https://evisa.rop.gov.om/" rel="noopener">evisa.rop.gov.om</a></li>
+            <li>Royal Oman Police: <a href="https://www.rop.gov.om/" rel="noopener">rop.gov.om</a></li>
+            <li>Oman Airports: <a href="https://www.omanairports.co.om/" rel="noopener">omanairports.co.om</a></li>
+            <li>Ministry of Heritage & Tourism: <a href="https://mht.gov.om/" rel="noopener">mht.gov.om</a></li>
+          </ul>
+          <p class="muted">This site is an informational portal; official sources remain authoritative.</p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Oman Visitor Information Portal.</p>
+      <p>© <span id="year"></span> Discover Oman.</p>
+      <p class="muted">
+        <a href="./accessibility.html">Accessibility</a> ·
+        <a href="./privacy.html">Privacy</a> ·
+        <a href="./credits.html">Image Credits</a>
+      </p>
     </div>
   </footer>
 
-  <script src="./js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
-
-

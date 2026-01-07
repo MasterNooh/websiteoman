@@ -1,0 +1,160 @@
+:root{
+  --bg:#0b1220;
+  --text:#eef3ff;
+  --muted: rgba(238,243,255,.78);
+  --line: rgba(255,255,255,.14);
+  --shadow: 0 18px 60px rgba(0,0,0,.35);
+  --radius: 18px;
+  --radius-lg: 26px;
+  --max: 1160px;
+  --accent: #7dd3fc;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: var(--bg);
+  line-height:1.55;
+  overflow-x:hidden;
+}
+
+.page{
+  position:relative;
+  min-height:100%;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+.page::before{
+  content:"";
+  position:fixed; inset:0;
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(125,211,252,.18), transparent 55%),
+    linear-gradient(180deg, rgba(11,18,32,.72), rgba(11,18,32,.92));
+  pointer-events:none;
+  z-index:-1;
+}
+.page-landing{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Muttrah_Corniche_1.jpg?width=2400");}
+
+.page-en-home{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_of_Sultan_Qaboos_Grand_Mosque_in_Muscat%2C_Oman_%2853697950888%29.jpg?width=2400");}
+.page-en-attractions{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Wadi_Shab%2C_Oman_-_2024_25.jpg?width=2400");}
+.page-en-food{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Omani_Halwa_with_saffron.jpg?width=2400");}
+.page-en-history{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Nizwa_Fort_Detail.JPG?width=2400");}
+.page-en-rules{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Jebel_Akhdar_view.jpg?width=2400");}
+.page-en-safety{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Wahiba_Sands%2C_Oman.jpg?width=2400");}
+.page-en-policy{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Bimmah_Sinkhole%2C_Oman.jpg?width=2400");}
+
+.page-ar-home{background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Muttrah_Corniche_1.jpg?width=2400");}
+
+a{color:inherit}
+.container{max-width:var(--max); margin:0 auto; padding:0 18px}
+.muted{color:var(--muted)}
+
+.sr-only{position:absolute; left:-9999px}
+.skip-link{position:absolute; left:-9999px; top:10px}
+.skip-link:focus{
+  left:10px; z-index:9999; background:#111a2f; padding:10px 12px;
+  border-radius:12px; border:1px solid var(--line);
+}
+
+.glass{
+  background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.06));
+  border:1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+.panel{padding:22px}
+.card{padding:18px; border-radius: var(--radius)}
+.note{margin-top:18px; padding:18px}
+
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background: rgba(11,18,32,.55);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.brand{display:flex; gap:12px; align-items:center; text-decoration:none}
+.brand-mark{
+  width:38px; height:38px; border-radius:14px;
+  background: radial-gradient(circle at 30% 30%, rgba(125,211,252,.95), transparent 55%);
+  border:1px solid rgba(255,255,255,.18);
+}
+.brand-title{display:block; font-weight:800; line-height:1.1}
+.brand-subtitle{display:block; font-size:.8rem; color:var(--muted)}
+
+.nav{display:flex; align-items:center; gap:10px}
+.nav-menu{display:flex; gap:6px; align-items:center; flex-wrap:wrap}
+.nav-link{
+  text-decoration:none; padding:10px 12px; border-radius:14px;
+  color:rgba(238,243,255,.88);
+  border:1px solid transparent;
+}
+.nav-link:hover{border-color:rgba(255,255,255,.14); background:rgba(255,255,255,.05)}
+.nav-link.is-active{border-color:rgba(125,211,252,.35); background:rgba(125,211,252,.10)}
+
+.lang-select{
+  border-radius:14px;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.06);
+  color: rgba(238,243,255,.92);
+}
+
+.section{padding:34px 0}
+.page-hero{padding:28px 0 10px}
+.page-hero-inner{padding:22px}
+.page-hero-inner h1{margin:0; letter-spacing:-.02em}
+
+.grid{display:grid; gap:14px}
+.grid-2{grid-template-columns: repeat(2, 1fr)}
+.grid-3{grid-template-columns: repeat(3, 1fr)}
+
+.h4{font-size:1.05rem; margin:0 0 10px}
+.lead{font-size:1.1rem; color:var(--muted); margin:10px 0 0}
+
+.bullets{margin:12px 0 0; padding-left:18px; color:var(--muted)}
+.bullets li{margin:8px 0}
+
+.card-media{padding:0; overflow:hidden}
+.card-media-top{
+  height:170px;
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.card-body{padding:16px 16px 18px}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  border-radius:16px; padding:11px 14px;
+  border:1px solid rgba(255,255,255,.16);
+  text-decoration:none; cursor:pointer;
+  font-weight:650;
+  background: rgba(255,255,255,.06);
+}
+.btn-primary{
+  background: linear-gradient(135deg, rgba(125,211,252,.26), rgba(125,211,252,.12));
+  border-color: rgba(125,211,252,.32);
+}
+.btn-like{display:block; text-decoration:none}
+
+.site-footer{padding:26px 0 46px}
+.footer-inner{border-top:1px solid rgba(255,255,255,.10); padding-top:16px; color:rgba(238,243,255,.78)}
+
+/* RTL helper */
+.rtl{direction:rtl; text-align:right}
+.rtl .nav-menu{justify-content:flex-start}
+.rtl .bullets{padding-left:0; padding-right:18px}
+
+/* Mobile */
+@media (max-width: 900px){
+  .grid-3{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 720px){
+  .grid-2, .grid-3{grid-template-columns:1fr}
+}
